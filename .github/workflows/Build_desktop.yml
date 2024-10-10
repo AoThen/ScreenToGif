@@ -1,11 +1,12 @@
 
-name: Build X64 Program
+name: Build
 
 on:
   push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+
+
+permissions:
+  contents: write
 
 jobs:
 
@@ -41,12 +42,21 @@ jobs:
     #   run: dotnet publish --configuration Release --no-build -o ./publish
 
     - name: Build the project
-      run: dotnet build --configuration Release -r win-x64 --self-contained true /p:PublishSingleFile=true /p:PublishTrimmed=true -o ./publish
+      run: dotnet publish --configuration Release -r win-x64 --self-contained true /p:PublishSingleFile=true /p:PublishTrimmed=true -o ./publish
 
 
     # Upload the MSIX package: https://github.com/marketplace/actions/upload-a-build-artifact
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: x64-build-artifacts
+        name: ScreenToGif-YaHei
         path: ./publish/*
+
+
+    - name: Release
+      uses: softprops/action-gh-release@v2
+      with:
+        tag_name: 'YaHei'
+        name: 'ScreenToGif-YaHei.zip'
+        files: |
+          ./publish/*
