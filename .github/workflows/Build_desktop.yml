@@ -31,19 +31,25 @@ jobs:
         dotnet-version: 8.0.x
 
     # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
-    - name: Setup MSBuild.exe
-      uses: microsoft/setup-msbuild@v2
+    # - name: Setup MSBuild.exe
+    #   uses: microsoft/setup-msbuild@v2
       
     - name: Install dependencies
       run: dotnet restore
-      
-    - name: Build the project
-      run: dotnet build --configuration Release --no-restore /p:Platform=x64
+
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+
+    - name: Publish
+      run: dotnet publish --configuration Release --no-build -o ./publish
+
+    # - name: Build the project
+    #   run: dotnet build --configuration Release --no-restore /p:Platform=x64
 
 
     # Upload the MSIX package: https://github.com/marketplace/actions/upload-a-build-artifact
     - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: x64-build-artifacts
-        path: ${{ github.workspace }}/*.exe
+        path: ./publish/*.exe
