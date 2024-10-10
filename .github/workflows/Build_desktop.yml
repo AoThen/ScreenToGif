@@ -52,4 +52,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: x64-build-artifacts
-        path: ./publish/*.exe
+        path: ./publish/*
