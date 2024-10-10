@@ -246,7 +246,7 @@
     <!--Editor • Caption-->
     <s:String x:Key="CaptionText">Text</s:String>
     <s:Boolean x:Key="IsCaptionFontGroupExpanded">True</s:Boolean>
-    <FontFamily x:Key="CaptionFontFamily">Segoe UI</FontFamily>
+    <FontFamily x:Key="CaptionFontFamily">Microsoft YaHei</FontFamily>
     <FontStyle x:Key="CaptionFontStyle">Normal</FontStyle>
     <FontWeight x:Key="CaptionFontWeight">Bold</FontWeight>
     <s:Double x:Key="CaptionFontSize">30.0</s:Double>
@@ -269,7 +269,7 @@
     <s:Double x:Key="KeyStrokesDelay">800.0</s:Double>
     <s:String x:Key="KeyStrokesSeparator">&#160;&#160;</s:String>
     <s:Boolean x:Key="IsKeyStrokesFontExpanded">True</s:Boolean>
-    <FontFamily x:Key="KeyStrokesFontFamily">Segoe UI</FontFamily>
+    <FontFamily x:Key="KeyStrokesFontFamily">Microsoft YaHei</FontFamily>
     <s:Double x:Key="KeyStrokesFontSize">30.0</s:Double>
     <Color x:Key="KeyStrokesFontColor">#FFFFFFFF</Color>
     <FontStyle x:Key="KeyStrokesFontStyle">Normal</FontStyle>
@@ -288,7 +288,7 @@
     <!--Editor • Free Text-->
     <s:String x:Key="FreeTextText">Text</s:String>
     <s:Boolean x:Key="IsFreeTextFontGroupExpanded">True</s:Boolean>
-    <FontFamily x:Key="FreeTextFontFamily">Segoe UI</FontFamily>
+    <FontFamily x:Key="FreeTextFontFamily">Microsoft YaHei</FontFamily>
     <FontStyle x:Key="FreeTextFontStyle">Normal</FontStyle>
     <FontWeight x:Key="FreeTextFontWeight">Normal</FontWeight>
     <s:Double x:Key="FreeTextFontSize">16.0</s:Double>
@@ -308,7 +308,7 @@
     <s:Boolean x:Key="IsTitleFrameFontGroupExpanded">True</s:Boolean>
     <s:Int32 x:Key="TitleFrameDelay">500</s:Int32>
     <Color x:Key="TitleFrameFontColor">#FF000000</Color>
-    <FontFamily x:Key="TitleFrameFontFamily">Segoe UI</FontFamily>
+    <FontFamily x:Key="TitleFrameFontFamily">Microsoft YaHei</FontFamily>
     <s:Double x:Key="TitleFrameFontSize">20.0</s:Double>
     <FontStyle x:Key="TitleFrameFontStyle">Normal</FontStyle>
     <FontWeight x:Key="TitleFrameFontWeight">Normal</FontWeight>
@@ -338,7 +338,7 @@
     <!--Editor • Progress-->
     <e:ProgressTypes x:Key="ProgressType">Bar</e:ProgressTypes>
     <s:Boolean x:Key="IsProgressFontGroupExpanded">True</s:Boolean>
-    <FontFamily x:Key="ProgressFontFamily">Segoe UI</FontFamily>
+    <FontFamily x:Key="ProgressFontFamily">Microsoft YaHei</FontFamily>
     <s:Double x:Key="ProgressFontSize">14.0</s:Double>
     <FontStyle x:Key="ProgressFontStyle">Normal</FontStyle>
     <FontWeight x:Key="ProgressFontWeight">Normal</FontWeight>

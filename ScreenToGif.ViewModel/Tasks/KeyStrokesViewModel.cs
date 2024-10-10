@@ -194,7 +194,7 @@ public class KeyStrokesViewModel : BaseTaskViewModel
             KeyStrokesExtended = true,
             KeyStrokesDelay = 800,
             KeyStrokesSeparator = "  ",
-            KeyStrokesFontFamily = new FontFamily("Segoe UI"),
+            KeyStrokesFontFamily = new FontFamily("Microsoft YaHei"),
             KeyStrokesFontSize = 30,
             KeyStrokesFontColor = Color.FromArgb(255,255,255,255),
             KeyStrokesFontStyle = FontStyles.Normal,

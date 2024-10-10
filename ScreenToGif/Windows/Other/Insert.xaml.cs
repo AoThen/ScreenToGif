@@ -463,7 +463,7 @@ public partial class Insert
 
                         //The image.
                         context.DrawImage(frameInfo.Path.SourceFrom(), new Rect(leftPoint, topPoint, RightImage.ActualWidth * scaleDiffRight, RightImage.ActualHeight * scaleDiffRight));
-                        //context.DrawText(new FormattedText("Hi!", CultureInfo.InvariantCulture, FlowDirection.LeftToRight, new Typeface("Segoe UI"), 32, Brushes.Black), new Point(0, 0));
+                        //context.DrawText(new FormattedText("Hi!", CultureInfo.InvariantCulture, FlowDirection.LeftToRight, new Typeface("Microsoft YaHei"), 32, Brushes.Black), new Point(0, 0));
                     }
 
                     //Converts the Visual (DrawingVisual) into a BitmapSource.

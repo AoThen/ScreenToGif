@@ -144,7 +144,7 @@ public class ProgressViewModel : BaseTaskViewModel
         return new ProgressViewModel
         {
             Type = ProgressTypes.Text,
-            FontFamily = new FontFamily("Segoe UI"),
+            FontFamily = new FontFamily("Microsoft YaHei"),
             FontStyle = FontStyles.Normal,
             FontWeight = FontWeights.Normal,
             FontSize = 14,
