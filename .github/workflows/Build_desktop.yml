@@ -42,21 +42,35 @@ jobs:
     #   run: dotnet publish --configuration Release --no-build -o ./publish
 
     - name: Build the project
-      run: dotnet publish --configuration Release -r win-x64 --self-contained true  -o ./publish
+      run: |
+        dotnet publish --configuration Release -r win-x64 --self-contained true  -o ./publish
+        7z a -tzip "./ScreenToGif-YaHei-Full.zip" "./publish/*" 
+        dotnet publish --configuration Release -r win-x64  -o ./publish2
+        7z a -tzip "./ScreenToGif-YaHei.zip" "./publish2/*" 
 
 
     # Upload the MSIX package: https://github.com/marketplace/actions/upload-a-build-artifact
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v4
+    # - name: Upload build artifacts
+    #   uses: actions/upload-artifact@v4
+    #   with:
+    #     name: ScreenToGif-YaHei
+    #     path: ./publish/*
+
+    # - name: ZiP
+    #   run: 7z a -tzip "./publish/ScreenToGif-YaHei.zip" "./publish/*" 
+
+    - name: Release1
+      uses: softprops/action-gh-release@v2
       with:
-        name: ScreenToGif-YaHei
-        path: ./publish/*
+        tag_name: 'YaHei'
+        name: 'ScreenToGif-YaHei.zip'
+        files: |
+          ./ScreenToGif-YaHei.zip
 
-
-    - name: Release
+    - name: Release2
       uses: softprops/action-gh-release@v2
       with:
         tag_name: 'self-contained'
-        name: 'ScreenToGif-YaHei.zip'
+        name: 'ScreenToGif-YaHei-Full.zip'
         files: |
-          ./publish/*
+          ./ScreenToGif-YaHei-Full.zip
